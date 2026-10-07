@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { BookingModal } from "@/components/BookingModal";
@@ -44,7 +45,7 @@ function Index() {
             <a href="#resultados" className="hover:text-foreground">Resultados</a>
             <a href="#duvidas" className="hover:text-foreground">Dúvidas</a>
           </nav>
-          <button onClick={() => book()} className="btn-primary px-4! py-2.5! text-sm">Solicitar horário</button>
+          <Button variant="salon" size="natural" onClick={() => book()} className="px-4! py-2.5! text-sm">Solicitar horário</Button>
         </div>
       </header>
 
@@ -59,7 +60,7 @@ function Index() {
             Cabelos, unhas e design de sobrancelhas feitos por profissionais especialistas — tudo num só studio, entre elas.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <button onClick={() => book()} className="btn-primary">Solicitar horário</button>
+            <Button variant="salon" size="natural" onClick={() => book()} className="">Solicitar horário</Button>
             <a href="#servicos" className="btn-outline">Ver serviços</a>
           </div>
           <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted-foreground">
@@ -98,7 +99,7 @@ function Index() {
           <div className="mt-3 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <h2 className="text-4xl text-primary md:text-5xl">Trabalhos reais, <em>feitos aqui.</em></h2>
             <div className="flex flex-wrap gap-2">
-              {FILTERS.map((f) => <button key={f} data-active={filter === f} onClick={() => setFilter(f)} className="chip">{f}</button>)}
+              {FILTERS.map((f) => <Button variant="salon" size="natural" key={f} data-active={filter === f} onClick={() => setFilter(f)} className="chip">{f}</Button>)}
             </div>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -112,7 +113,7 @@ function Index() {
                   <h3 className="text-2xl text-primary">{s.title}</h3>
                   <p className="mt-1 flex-1 text-sm text-muted-foreground">{s.copy}</p>
                   <p className="mt-3 text-xs tracking-wide text-gold uppercase">Valor sob consulta</p>
-                  <button onClick={() => book(s)} className="btn-outline mt-4 w-full">{s.cta}</button>
+                  <Button variant="salonOutline" size="natural" onClick={() => book(s)} className="mt-4 w-full">{s.cta}</Button>
                 </div>
               </article>
             ))}
@@ -127,7 +128,7 @@ function Index() {
           <p className="eyebrow">Antes & depois</p>
           <h2 className="mt-3 text-4xl text-primary md:text-5xl">Antes e depois que mostram o trabalho.</h2>
           <p className="mt-4 text-muted-foreground">Brilho, movimento e um novo visual. Cada detalhe faz a diferença para realçar a sua beleza.</p>
-          <button onClick={() => book(SERVICES.find((s) => s.id === "coloracao") ?? null)} className="btn-primary mt-6">Quero um resultado assim</button>
+          <Button variant="salonOutline" size="natural" onClick={() => book(SERVICES.find((s) => s.id === "coloracao") ?? null)} className="mt-6">Quero um resultado assim</Button>
         </div>
       </section>
 
@@ -154,7 +155,7 @@ function Index() {
         <p className="text-gold">★★★★★</p>
         <h2 className="mt-2 text-3xl text-primary">Gostou do seu atendimento?</h2>
         <p className="mt-2 text-sm text-muted-foreground">Conte como foi sua experiência no Google — leva menos de um minuto.</p>
-        <a href={SALON.google} target="_blank" rel="noopener noreferrer" className="btn-outline mt-5">Avaliar no Google</a>
+        <a href={SALON.google} target="_blank" rel="noopener noreferrer" className="mt-5">Avaliar no Google</a>
       </section>
 
       {/* FAQ */}
