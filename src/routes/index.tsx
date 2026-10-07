@@ -167,17 +167,6 @@ function Index() {
             <a href={SALON.instagram} target="_blank" rel="noopener noreferrer">Conhecer @entreelas.studiobeleza <span aria-hidden="true">→</span></a>
           </Button>
         </div>
-        <div className="mt-12 overflow-hidden text-primary/25" aria-hidden="true">
-          <div className="flex w-max animate-marquee">
-            {[0, 1].map((k) => (
-              <div key={k} className="flex shrink-0">
-                {Array.from({ length: 8 }).map((_, i) => (
-                  <span key={i} className="flex items-center px-6 font-display text-2xl italic">@entreelas.studiobeleza<span className="ml-12 text-base not-italic text-gold">✦</span></span>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* FAQ */}
