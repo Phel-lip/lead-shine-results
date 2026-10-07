@@ -15,8 +15,6 @@ export const Route = createFileRoute("/")({
       { property: "og:description", content: "Cabelos, unhas e sobrancelhas. Solicite seu horário pelo WhatsApp." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { property: "og:image", content: SALON.hero },
-      { name: "twitter:image", content: SALON.hero },
     ],
   }),
   component: Index,

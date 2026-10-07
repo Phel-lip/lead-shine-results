@@ -19,7 +19,7 @@ const buttonVariants = cva(
         salon: "btn-primary rounded-full",
         salonOutline: "btn-outline rounded-full",
         salonChip: "chip rounded-full",
-        salonBare: "",
+        salonBare: "whitespace-normal",
       },
       size: {
         default: "h-9 px-4 py-2",
