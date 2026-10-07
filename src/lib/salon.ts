@@ -37,6 +37,16 @@ export const SERVICES: Service[] = [
   { id: "maospes", title: "Mãos & pés combinando", category: "Unhas", copy: "O combo completo para o visual ficar ainda mais elegante.", cta: "Quero horário para mãos e pés", img: p5.url },
 ];
 
+// Placeholder quotes for this build — swap in verified client reviews as soon as
+// real Google ratings are available; do not cite Google as the source of these.
+export type Testimonial = { quote: string; category: Category };
+
+export const TESTIMONIALS: Testimonial[] = [
+  { quote: "Amei o cuidado com meu cabelo! A escova ficou leve, com muito brilho e movimento. Saí me sentindo linda.", category: "Cabelos" },
+  { quote: "As unhas magnéticas ficaram um encanto! O acabamento ficou delicado e o brilho muda com a luz. Adorei cada detalhe.", category: "Unhas" },
+  { quote: "Minhas sobrancelhas ficaram naturais e bem definidas, exatamente como eu queria. O atendimento foi supercuidadoso.", category: "Sobrancelhas" },
+];
+
 export const PERIODS = ["Manhã (08h–12h)", "Tarde (12h–16h)", "Fim da tarde (16h–19h)"];
 
 export function buildMessage(o: { service: string; professional: string; date?: string; period?: string; note?: string }) {
