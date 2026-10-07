@@ -161,8 +161,8 @@ function Index() {
       <section className="border-y bg-secondary/60 py-16 md:py-20">
         <div className="mx-auto max-w-3xl px-5 text-center">
           <p className="eyebrow">Veja mais de perto</p>
-          <h2 className="mt-3 text-4xl text-primary md:text-5xl">Nosso dia a dia,<br className="hidden md:block" /> no seu feed.</h2>
-          <p className="mt-4 text-muted-foreground">Trabalhos, novidades e detalhes do salão no perfil oficial.</p>
+          <h2 className="mt-3 text-4xl text-primary md:text-5xl">Nosso dia a dia,<br /> no seu feed.</h2>
+          <p className="mx-auto mt-4 max-w-md text-balance text-muted-foreground">Trabalhos, novidades e detalhes do salão no perfil oficial.</p>
           <Button variant="salon" size="natural" asChild className="mt-7">
             <a href={SALON.instagram} target="_blank" rel="noopener noreferrer">Conhecer @entreelas.studiobeleza <span aria-hidden="true">→</span></a>
           </Button>
