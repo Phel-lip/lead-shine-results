@@ -99,7 +99,7 @@ function Index() {
           <div className="mt-3 flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <h2 className="text-4xl text-primary md:text-5xl">Trabalhos reais, <em>feitos aqui.</em></h2>
             <div className="flex flex-wrap gap-2">
-              {FILTERS.map((f) => <Button variant="salon" size="natural" key={f} data-active={filter === f} onClick={() => setFilter(f)} className="chip">{f}</Button>)}
+              {FILTERS.map((f) => <Button variant="salonChip" size="natural" key={f} data-active={filter === f} onClick={() => setFilter(f)} className="">{f}</Button>)}
             </div>
           </div>
           <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -128,7 +128,7 @@ function Index() {
           <p className="eyebrow">Antes & depois</p>
           <h2 className="mt-3 text-4xl text-primary md:text-5xl">Antes e depois que mostram o trabalho.</h2>
           <p className="mt-4 text-muted-foreground">Brilho, movimento e um novo visual. Cada detalhe faz a diferença para realçar a sua beleza.</p>
-          <Button variant="salonOutline" size="natural" onClick={() => book(SERVICES.find((s) => s.id === "coloracao") ?? null)} className="mt-6">Quero um resultado assim</Button>
+          <Button variant="salon" size="natural" onClick={() => book(SERVICES.find((s) => s.id === "coloracao") ?? null)} className="mt-6">Quero um resultado assim</Button>
         </div>
       </section>
 

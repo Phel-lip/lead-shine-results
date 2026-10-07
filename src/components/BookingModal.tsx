@@ -38,7 +38,7 @@ export function BookingModal({ open, initial, onClose }: { open: boolean; initia
         <div className="border-b px-6 pt-5 pb-4">
           <div className="flex items-center justify-between">
             <p className="eyebrow">Solicitação de horário</p>
-            <Button variant="salon" size="natural" aria-label="Fechar" onClick={onClose} className="text-2xl leading-none text-muted-foreground hover:text-foreground">×</Button>
+            <Button variant="salonBare" size="natural" aria-label="Fechar" onClick={onClose} className="text-2xl leading-none text-muted-foreground hover:text-foreground">×</Button>
           </div>
           <div className="mt-3 flex gap-1.5">
             {STEPS.map((s, i) => (
@@ -55,7 +55,7 @@ export function BookingModal({ open, initial, onClose }: { open: boolean; initia
             <div className="space-y-2">
               <h3 className="text-2xl">Qual serviço você deseja?</h3>
               {SERVICES.map((s) => (
-                <Button variant="salonOutline" size="natural" key={s.id} onClick={() => { setService(s); setPro(""); setStep(1); }}
+                <Button variant="salonBare" size="natural" key={s.id} onClick={() => { setService(s); setPro(""); setStep(1); }}
                   className={`flex w-full items-center gap-3 rounded-xl border p-2 text-left transition hover:border-gold ${service?.id === s.id ? "border-gold bg-secondary" : ""}`}>
                   <img src={s.img} alt="" className="h-12 w-12 rounded-lg object-cover" />
                   <div><p className="text-sm font-medium">{s.title}</p><p className="text-xs text-muted-foreground">{s.category} · Valor sob consulta</p></div>
@@ -68,7 +68,7 @@ export function BookingModal({ open, initial, onClose }: { open: boolean; initia
             <div className="space-y-3">
               <h3 className="text-2xl">Com quem você prefere?</h3>
               {[{ name: p.name, role: p.role }, { name: "", role: "O salão indica a melhor profissional" }].map((o) => (
-                <Button variant="salonChip" size="natural" key={o.name || "none"} onClick={() => setPro(o.name)}
+                <Button variant="salonBare" size="natural" key={o.name || "none"} onClick={() => setPro(o.name)}
                   className={`w-full rounded-xl border p-4 text-left transition hover:border-gold ${pro === o.name ? "border-gold bg-secondary" : ""}`}>
                   <p className="font-medium">{o.name || "Sem preferência"}</p>
                   <p className="text-xs text-muted-foreground">{o.role}</p>
@@ -90,7 +90,7 @@ export function BookingModal({ open, initial, onClose }: { open: boolean; initia
                 <p className="text-sm">Período <span className="text-muted-foreground">(opcional)</span></p>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {PERIODS.map((x) => (
-                    <Button variant="salonBare" size="natural" key={x} data-active={period === x} onClick={() => setPeriod(period === x ? "" : x)} className="">{x}</Button>
+                    <Button variant="salonChip" size="natural" key={x} data-active={period === x} onClick={() => setPeriod(period === x ? "" : x)} className="">{x}</Button>
                   ))}
                 </div>
               </div>
@@ -117,9 +117,9 @@ export function BookingModal({ open, initial, onClose }: { open: boolean; initia
         </div>
 
         <div className="flex gap-3 border-t px-6 py-4">
-          {step > 0 && <Button variant="salonBare" size="natural" onClick={() => setStep(step - 1)} className="">Voltar</Button>}
+          {step > 0 && <Button variant="salonOutline" size="natural" onClick={() => setStep(step - 1)} className="">Voltar</Button>}
           {step < 3 ? (
-            <Button variant="salonBare" size="natural" disabled={!service} onClick={() => setStep(step + 1)} className="flex-1">Continuar</Button>
+            <Button variant="salon" size="natural" disabled={!service} onClick={() => setStep(step + 1)} className="flex-1">Continuar</Button>
           ) : (
             <a href={url} target="_blank" rel="noopener noreferrer" onClick={send} data-testid="wa-link" className="btn-primary flex-1">Enviar solicitação pelo WhatsApp</a>
           )}
