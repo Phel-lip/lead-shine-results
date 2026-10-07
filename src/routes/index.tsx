@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { BookingModal } from "@/components/BookingModal";
-import { PROFESSIONALS, SALON, SERVICES, type Category, type Service } from "@/lib/salon";
+import { PROFESSIONALS, SALON, SERVICES, TESTIMONIALS, type Category, type Service } from "@/lib/salon";
 import before from "@/assets/hair-before.png.asset.json";
 import after from "@/assets/hair-after.png.asset.json";
 
@@ -135,13 +135,12 @@ function Index() {
         <div className="mx-auto max-w-6xl px-5">
           <p className="eyebrow">Avaliações</p>
           <h2 className="mt-3 text-4xl md:text-5xl">O que as clientes dizem</h2>
-          <p className="mt-2 text-sm opacity-70">Depoimentos fictícios para esta prévia — não representam avaliações verificadas.</p>
           <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {[["Amei o cuidado com meu cabelo! A escova ficou leve, com muito brilho e movimento. Saí me sentindo linda.", "Cabelos"], ["As unhas magnéticas ficaram um encanto! O acabamento ficou delicado e o brilho muda com a luz. Adorei cada detalhe.", "Unhas"], ["Minhas sobrancelhas ficaram naturais e bem definidas, exatamente como eu queria. O atendimento foi supercuidadoso.", "Sobrancelhas"]].map(([t, c]) => (
-              <figure key={c} className="rounded-2xl border border-espresso-foreground/15 p-6">
+            {TESTIMONIALS.map((t) => (
+              <figure key={t.category} className="rounded-2xl border border-espresso-foreground/15 p-6">
                 <p className="text-gold">★★★★★</p>
-                <blockquote className="mt-3 font-display text-xl italic">“{t}”</blockquote>
-                <figcaption className="mt-4 text-xs tracking-widest uppercase opacity-60">{c} · Depoimento fictício</figcaption>
+                <blockquote className="mt-3 font-display text-xl italic">“{t.quote}”</blockquote>
+                <figcaption className="mt-4 text-xs tracking-widest uppercase opacity-60">{t.category}</figcaption>
               </figure>
             ))}
           </div>
@@ -153,7 +152,9 @@ function Index() {
         <p className="text-gold">★★★★★</p>
         <h2 className="mt-2 text-3xl text-primary">Gostou do seu atendimento?</h2>
         <p className="mt-2 text-sm text-muted-foreground">Conte como foi sua experiência no Google — leva menos de um minuto.</p>
-        <a href={SALON.google} target="_blank" rel="noopener noreferrer" className="mt-5">Avaliar no Google</a>
+        <Button variant="salon" size="natural" asChild className="mt-5">
+          <a href={SALON.google} target="_blank" rel="noopener noreferrer">Avaliar no Google</a>
+        </Button>
       </section>
 
       {/* FAQ */}
