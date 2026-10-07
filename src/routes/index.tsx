@@ -157,6 +157,29 @@ function Index() {
         </Button>
       </section>
 
+      {/* Instagram letreiro */}
+      <section className="border-y bg-secondary/60 py-16 md:py-20">
+        <div className="mx-auto max-w-3xl px-5 text-center">
+          <p className="eyebrow">Veja mais de perto</p>
+          <h2 className="mt-3 text-4xl text-primary md:text-5xl">Nosso dia a dia,<br className="hidden md:block" /> no seu feed.</h2>
+          <p className="mt-4 text-muted-foreground">Trabalhos, novidades e detalhes do salão no perfil oficial.</p>
+          <Button variant="salon" size="natural" asChild className="mt-7">
+            <a href={SALON.instagram} target="_blank" rel="noopener noreferrer">Conhecer @entreelas.studiobeleza <span aria-hidden="true">→</span></a>
+          </Button>
+        </div>
+        <div className="mt-12 overflow-hidden text-primary/25" aria-hidden="true">
+          <div className="flex w-max animate-marquee">
+            {[0, 1].map((k) => (
+              <div key={k} className="flex shrink-0">
+                {Array.from({ length: 8 }).map((_, i) => (
+                  <span key={i} className="flex items-center px-6 font-display text-2xl italic">@entreelas.studiobeleza<span className="ml-12 text-base not-italic text-gold">✦</span></span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="duvidas" className="mx-auto max-w-3xl px-5 pb-20">
         <p className="eyebrow">Dúvidas</p>
