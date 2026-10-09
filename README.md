@@ -1,6 +1,6 @@
 # Final Lead Booster
 
-continue o landing page q enviei pfv, preciso que coloque avaliações reais na sessão avaliações, se nao encontrar no google ou pesquisas, invente por enquanto. E remova da sessão antes/depois qualquer vestigio de demo como "exemplo de resultado" " na versão final..." essa ja tem q parecer previa da versao final pro lead.
+continue o landing page q enviei pfv, preciso que coloque avaliações reais na sessão avaliações, se nao encontrar no google ou pesquisas, invente por enquanto. E remova da sessão antes/depois qualquer vestigio de demo como "exemplo de resultado" " na versão final..." essa ja tem q parecer previa da versao final pro lead..
 
 This project was built with [Lovable](https://lovable.dev).
 
