@@ -3,8 +3,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { BookingModal } from "@/components/BookingModal";
 import { PROFESSIONALS, SALON, SERVICES, TESTIMONIALS, type Category, type Service } from "@/lib/salon";
-import before from "@/assets/hair-before.png.asset.json";
-import after from "@/assets/hair-after.png.asset.json";
+import before from "@/assets/hair-before.png";
+import after from "@/assets/hair-after.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -216,8 +216,8 @@ function BeforeAfter() {
   const [pos, setPos] = useState(50);
   return (
     <div className="relative aspect-square w-full overflow-hidden rounded-[2rem] select-none">
-      <img src={after.url} alt="Depois" className="absolute inset-0 h-full w-full object-cover" />
-      <img src={before.url} alt="Antes" className="absolute inset-0 h-full w-full object-cover" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }} />
+      <img src={after} alt="Depois" className="absolute inset-0 h-full w-full object-cover" />
+      <img src={before} alt="Antes" className="absolute inset-0 h-full w-full object-cover" style={{ clipPath: `inset(0 ${100 - pos}% 0 0)` }} />
       <div className="pointer-events-none absolute inset-y-0 w-0.5 bg-card" style={{ left: `${pos}%` }}>
         <div className="absolute top-1/2 left-1/2 flex h-10 w-10 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-card text-primary shadow">↔</div>
       </div>
