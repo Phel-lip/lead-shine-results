@@ -1,4 +1,7 @@
 # Tasks
+- [ ] Restore all salon photos as repository-local assets compatible with Vercel.
+- [ ] Replace Lovable-only image URLs while preserving the updated FAQ and page content.
+- [ ] Verify every hero, service, and before/after image in the local production flow.
 - [x] Restore the uploaded landing page while preserving its design.
 - [x] Search for verified reviews and update the reviews section honestly (no verified reviews found; fictional previews disclosed).
 - [x] Remove demonstration language from before/after.
