@@ -1,11 +1,11 @@
-import p2 from "@/assets/ee-p2_0.jpg.asset.json";
-import p3 from "@/assets/ee-p3_0.jpg.asset.json";
-import p4 from "@/assets/ee-p4_0.jpg.asset.json";
-import p5 from "@/assets/ee-p5_0.jpg.asset.json";
-import p6 from "@/assets/ee-p6_0.jpg.asset.json";
-import p8 from "@/assets/ee-p8_0.jpg.asset.json";
-import p9 from "@/assets/ee-p9_0.jpg.asset.json";
-import p11 from "@/assets/ee-p11_0.jpg.asset.json";
+import p2 from "@/assets/ee-p2_0.jpg";
+import p3 from "@/assets/ee-p3_0.jpg";
+import p4 from "@/assets/ee-p4_0.jpg";
+import p5 from "@/assets/ee-p5_0.jpg";
+import p6 from "@/assets/ee-p6_0.jpg";
+import p8 from "@/assets/ee-p8_0.jpg";
+import p9 from "@/assets/ee-p9_0.jpg";
+import p11 from "@/assets/ee-p11_0.jpg";
 
 export type Category = "Cabelos" | "Unhas" | "Sobrancelhas";
 
@@ -22,19 +22,19 @@ export const SALON = {
   instagram: "https://www.instagram.com/entreelas.studiobeleza/",
   linktree: "https://linktr.ee/Entreelas_2",
   google: "https://www.google.com/maps/search/?api=1&query=Entre+Elas+Studio+de+Beleza+Cabo+de+Santo+Agostinho",
-  hero: p8.url,
+  hero: p8,
 };
 
 export type Service = { id: string; title: string; category: Category; copy: string; cta: string; img: string };
 
 export const SERVICES: Service[] = [
-  { id: "escova", title: "Escova modelada", category: "Cabelos", copy: "Fios alinhados, brilho e movimento com o acabamento da Manu.", cta: "Quero horário para escova", img: p4.url },
-  { id: "coloracao", title: "Coloração", category: "Cabelos", copy: "Cor pensada para o seu tom, do castanho ao iluminado.", cta: "Quero horário para coloração", img: p9.url },
-  { id: "liso", title: "Liso & finalização", category: "Cabelos", copy: "Cabelo liso, leve e com caimento impecável.", cta: "Quero horário para liso", img: p2.url },
-  { id: "shadow", title: "Sobrancelhas Shadow Line", category: "Sobrancelhas", copy: "Efeito delicado e natural que realça o formato do seu olhar.", cta: "Quero horário para sobrancelhas", img: p3.url },
-  { id: "manicure", title: "Manicure & esmaltação", category: "Unhas", copy: "Esmaltação caprichada com alicates esterilizados a cada atendimento.", cta: "Quero horário para manicure", img: p11.url },
-  { id: "magneticas", title: "Unhas magnéticas", category: "Unhas", copy: "Um brilho que brinca com a luz e muda a cada movimento.", cta: "Quero horário para unhas magnéticas", img: p6.url },
-  { id: "maospes", title: "Mãos & pés combinando", category: "Unhas", copy: "O combo completo para o visual ficar ainda mais elegante.", cta: "Quero horário para mãos e pés", img: p5.url },
+  { id: "escova", title: "Escova modelada", category: "Cabelos", copy: "Fios alinhados, brilho e movimento com o acabamento da Manu.", cta: "Quero horário para escova", img: p4 },
+  { id: "coloracao", title: "Coloração", category: "Cabelos", copy: "Cor pensada para o seu tom, do castanho ao iluminado.", cta: "Quero horário para coloração", img: p9 },
+  { id: "liso", title: "Liso & finalização", category: "Cabelos", copy: "Cabelo liso, leve e com caimento impecável.", cta: "Quero horário para liso", img: p2 },
+  { id: "shadow", title: "Sobrancelhas Shadow Line", category: "Sobrancelhas", copy: "Efeito delicado e natural que realça o formato do seu olhar.", cta: "Quero horário para sobrancelhas", img: p3 },
+  { id: "manicure", title: "Manicure & esmaltação", category: "Unhas", copy: "Esmaltação caprichada com alicates esterilizados a cada atendimento.", cta: "Quero horário para manicure", img: p11 },
+  { id: "magneticas", title: "Unhas magnéticas", category: "Unhas", copy: "Um brilho que brinca com a luz e muda a cada movimento.", cta: "Quero horário para unhas magnéticas", img: p6 },
+  { id: "maospes", title: "Mãos & pés combinando", category: "Unhas", copy: "O combo completo para o visual ficar ainda mais elegante.", cta: "Quero horário para mãos e pés", img: p5 },
 ];
 
 // Placeholder quotes for this build — swap in verified client reviews as soon as
